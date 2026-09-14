@@ -2,7 +2,7 @@
 
 *Institución:* Universidad Nacional del Altiplano  
 *Programa:* Ingeniería de Sistemas  
-*Curso:* Algoritmos y Programación  
+*Curso:* Introducción a la lógica de programación  
 
 ---
 
@@ -28,10 +28,11 @@
 cpp
 #include <iostream>
 using namespace std;
-
+xx
 int main() 
 {
     //10 EJERCICIOS EN C++
+    
     // Ejercicio 1
     int X1 = 10, Y1 = 4;
     X1 = X1 + Y1;
@@ -172,4 +173,114 @@ int main()
   * B-- evalúa como 3 y luego decrementa B a 2.
   * C = 8 + 3 = 11.
 * *Resultado:* A = 8, B = 2, C = 11
-*
+
+## Ejercicios Adicionales: Condicionales Lógicos y Fórmulas Matemáticas
+
+### Ejercicio A: Control de Ingreso a Evento (Uso de Operadores Lógicos)
+*Enunciado:* Realizar un programa en C++ que permita el ingreso a un evento solo a personas mayores de edad y que tengan ticket VIP.
+
+cpp
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    //codigo
+    
+    int edad;
+    bool VIP,ingreso;
+    
+    // Lectura de datos
+    cin >> edad >> VIP;
+    
+    // Evalúa si es mayor de edad (>=18) Y tiene ticket VIP (&&)
+    bool ingreso = (edad >= 18) && VIP;
+    
+    cout << "Resultado de ingreso (1 = Permitido, 0 = Denegado): " << ingreso << endl;
+    
+    return 0;
+}
+
+
+---
+
+### Ejercicio B: Mayor y Menor de dos números (Sin estructuras selectivas if/else)
+*Enunciado:* Realizar un programa en C++ que permita identificar el número mayor y menor entre dos valores sin utilizar estructuras selectivas (usando fórmulas con valor absoluto).
+
+cpp
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    //codigo
+    
+    double a, b;
+    
+    cin >> a >> b;
+    
+    // Aplicación de fórmulas matemáticas utilizando valor absoluto
+    double mayor = (a + b + abs(a - b)) / 2;
+    double menor = (a + b - abs(a - b)) / 2;
+    
+    cout << "mayor: " << mayor << endl;
+    cout << "menor: " << menor << endl;
+    
+    return 0;
+}
+
+
+## Estructuras Selectivas (if / else)
+
+### Ejercicio C: Determinación de Número Par o Impar
+*Enunciado:* Realizar un algoritmo y programa en C++ que determine si un número entero ingresado es par o impar.
+
+cpp
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+    //codigo
+    
+    int n;
+    cout << "Ingrese un numero entero: ";
+    cin >> n;
+
+    if (n % 2 == 0) 
+    {
+        cout << "par" << endl;
+    } else {
+        cout << "impar" << endl;
+    }
+
+    return 0;
+}
+
+
+---
+
+### Ejercicio D: Comparación de Dos Caracteres
+*Enunciado:* Realizar un programa en C++ que permita diferenciar 2 caracteres ingresados por teclado.  
+(Nota: C++ distingue entre mayúsculas y minúsculas, por lo que 'a' == 'A' dará como resultado "Diferente" y 'a' == 'a' dará "Igual").
+
+cpp
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+    //codigo
+    
+    char C1, C2;
+    cout << "Ingrese dos caracteres: ";
+    cin >> C1 >> C2;
+
+    if (C1 == C2) {
+        cout << "iguales" << endl;
+    } else {
+        cout << "diferente" << endl;
+    }
+
+    return 0;
+}
